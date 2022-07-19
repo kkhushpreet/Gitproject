@@ -1,0 +1,32 @@
+<%- include('./partials/header.ejs') %>
+<div class="container">
+  <div class="card mb4">
+    <div class="card-body sign-in-body">
+      <% if(message === 'error'){ %>
+      <h4 class="warning">
+        Whoops! You have to sign in before you can make a cluck!
+      </h4>
+      <% } %>
+      <form action="/sign_in" method="POST" class="sign-in-form">
+        <div class="form-group">
+          <label class="username-heading" for="username">Username</label>
+          <input
+            type="username"
+            name="username"
+            class="form-control"
+            id="username"
+            placeholder="eg. Madam Welminster"
+          />
+        </div>
+        <button
+          type="submit"
+          class="btn btn-outline-secondary btn-lg sign-in-btn"
+        >
+          Sign In
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include('./partials/footer.ejs') %>

@@ -1,0 +1,97 @@
+nav {
+    border-bottom: solid lightgrey 2px;
+  }
+  
+  .logo {
+    padding: 0;
+  }
+  
+  .chicken-icon {
+    height: 55px;
+    width: 55px;
+  }
+  
+  .btn-lg {
+    margin: 0 0.5em 0 0.5em;
+  }
+  
+  .username {
+    margin-top: 0.5em;
+    font-size: 20px;
+    color: grey;
+  }
+  
+  .nav-item {
+    padding: 1px;
+  }
+  
+  .container {
+    margin-top: 2em;
+  }
+  
+  .sign-in-body {
+    margin: 1em;
+  }
+  
+  .btn-outline-secondary {
+    float: right;
+    width: 15%;
+  }
+  
+  .username-heading {
+    font-size: 25px;
+    color: darkslategrey;
+  }
+  
+  .cluck-header {
+    font-size: 20px;
+    color: darkslategrey;
+  }
+  
+  .char-count {
+    font-size: 15px;
+    color: lightslategray;
+  }
+  
+  .loaded-image {
+    display: flex;
+    width: 100%;
+    height: auto;
+    border-radius: 2%;
+  }
+  
+  .cluck-cards {
+    display: flex;
+  }
+  
+  .avatar {
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: column;
+    width: 15%;
+  }
+  
+  .avatar-img {
+    width: 80%;
+    height: auto;
+    border-radius: 10%;
+  }
+  
+  .content-body {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+  
+  .cluck-img {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cluck-content {
+    font-size: 20px;
+  }
+  
+  .warning {
+    color: goldenrod;
+  }

@@ -1,0 +1,37 @@
+<%- include('../partials/header.ejs') %>
+<div class="container">
+  <div class="card mb4">
+    <div class="card-body">
+      <form action="/clucks" method="POST">
+        <div class="form-group">
+          <label for="content" class="cluck-header">Content</label>
+          <label for="content" class="char-count"
+            >Maxiumum Characters: 255</label
+          >
+          <textarea
+            name="content"
+            class="form-control"
+            rows="3"
+            placeholder="Whatchoo cluckin' 'bout?"
+            maxlength="255"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="image_url" class="cluck-header">Image URL</label>
+          <input
+            type="text"
+            class="form-control"
+            name="image_url"
+            placeholder="http://i.imgur.com/some.png"
+          />
+        </div>
+        <input
+          type="submit"
+          class="btn btn-lg btn-outline-secondary"
+          value="Cluck!"
+        />
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('../partials/footer.ejs') %>

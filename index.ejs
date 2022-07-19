@@ -1,0 +1,29 @@
+<%- include('../partials/header.ejs') %>
+<div class="container">
+    <% for(let each of clucks) { %>
+    <div class="card mb-4">    
+        <div class="card-body cluck-cards">
+            <div class="avatar">
+                <img class="avatar-img" src="/images/Avatar.png" alt="chicken avatar">
+            </div>
+            <div class="content-body">
+            <div class="content-header">
+                <h5>
+                    <%=each.username %> 
+                </h5>
+            </div>
+            <div class="cluck-content">
+                <p class="card-text">
+                    <div><%= each.content %></div>
+                </p>
+            
+            </div>
+            <div class="cluck-img">
+                <img class="loaded-image" src="<%= each.image_url %>">
+            </div>
+        </div>
+        </div>
+    </div>
+    <% } %>
+</div>
+<%- include('../partials/footer.ejs') %>

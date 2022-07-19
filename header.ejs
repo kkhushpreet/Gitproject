@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cluckr</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/master.css" />
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-sm justify-content-between">
+          <div class="logo">
+        <a class="navbar-brand" href="/clucks/index">
+            <img
+              class="chicken-icon"
+              src="/images/chicken.png"
+              alt="tiny chicken logo"
+            />
+        </a>
+    </div>
+        </button>
+        <div class="nav-buttons">
+          <ul class="navbar-nav">
+            <% if (loggedInUserName) { %>
+            <li class="nav-item">
+                <form action="/clucks/new" method="GET" class="form-inline">
+                <button class="btn btn-lg btn-secondary" type="submit">
+                Cluck!
+                 </button>
+                </form>
+            </li>
+            <li class="nav-item">
+              <div class="username"><%= loggedInUserName %></div>
+            </li>
+            <li class="nav-item">
+              <form action="/sign_out" method="POST" class="form-inline">
+                <button class="btn btn-lg btn-secondary">Sign Out</button>
+              </form>
+            </li>
+            <% } else { %>
+              <li class="nav-item">
+                  <form action="/clucks/new" method="GET" class="form-inline">
+                  <button class="btn btn-lg btn-secondary" type="submit">
+                  Cluck!
+                   </button>
+                  </form>
+              </li>
+            <li class="nav-item">
+              <form action="/sign_in" method="GET" class="form-inline">
+                <button class="btn btn-lg btn-secondary" type="submit">
+                  Sign In
+                </button>
+              </form>
+            </li>
+            <% } %>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </body>
+</html>
